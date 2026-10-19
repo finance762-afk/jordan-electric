@@ -4,20 +4,216 @@
       "path": "/",
       "useful_because": "A Newberry homeowner, builder or business owner can see in one screen what Jordan Electric actually does (new construction wiring, panel upgrades, commercial installations, generator tie-ins and repair calls), check the Florida contractor license number against the state DBPR search, learn the business is family-managed with over 20 years of hands-on experience behind it, and see how a request moves from the quote form to a scheduled job. The storm-season band ties the generator service to Florida's June 1 to November 30 hurricane season, which a generic electrician page does not.",
       "needs_confirmation": [
-        { "fact": "Owner name", "question": "Your current website says the company is owned by Jeff Jordan, while our intake lists Mallory Jordan as the owner. Who should we name as the owner, and should Mallory be listed as office or operations contact?", "where": "about section (owner left unnamed until confirmed)" },
-        { "fact": "Business address", "question": "Your current website shows 305 SW 250th Street, Newberry, FL 32669, but intake gave PO Box 215. Which address should appear publicly, and is the street address a customer-facing location?", "where": "footer NAP, estimate section, LocalBusiness schema" },
-        { "fact": "License number EC 13016035", "question": "We show your Florida electrical contractor license as EC 13016035 (taken from your current website). Is that number current and correct?", "where": "hero chip, FAQ" },
-        { "fact": "Insurance", "question": "Do you carry general liability insurance and workers' compensation? If so, may we say 'licensed and insured' on the site?", "where": "hero chips, FAQ (left out until confirmed)" },
-        { "fact": "Response time", "question": "How quickly do you typically reply to a quote request (same day, within 24 hours, next business day)?", "where": "hero form tagline, estimate dialog, next steps (currently says 'reviewed promptly')" },
-        { "fact": "Quote process", "question": "How do you quote a job: an on-site visit, a written estimate, a diagnostic fee for service calls? Is there any trip charge?", "where": "process step 3 and next steps" },
-        { "fact": "Permits", "question": "Do you pull permits and schedule inspections for the customer on jobs that need them (panel upgrades, new circuits, service changes)?", "where": "FAQ (left out until confirmed)" },
-        { "fact": "Emergency service", "question": "Do you take emergency or after-hours calls? If so, what hours?", "where": "hero chips, storm band (left out until confirmed)" },
-        { "fact": "Business hours", "question": "What are your business hours?", "where": "footer, LocalBusiness schema" },
-        { "fact": "Service area towns", "question": "Which towns beyond Newberry do you regularly serve (Gainesville, Alachua, High Springs, Archer, Jonesville, Trenton)? Is there a mileage limit?", "where": "service-area sentence, area pages" },
-        { "fact": "Generator brands and surge protection", "question": "Which generator brands do you install, do you install transfer switches and whole-home surge protection, and do you do post-storm electrical inspections?", "where": "generator card, storm band" },
-        { "fact": "EV chargers as a service", "question": "Your About page mentions EV charger installations. Should EV charger installation be listed as its own service?", "where": "services grid, ticker" },
-        { "fact": "Job photos and logo", "question": "Please upload original photos of recent jobs (panels, new construction rough-ins, generators, EV chargers, commercial work) and your logo file. The homepage currently uses icon cards and a type-only hero because no photos were supplied.", "where": "hero, service cards, about section, gallery" },
-        { "fact": "Google Business Profile", "question": "Do you have a Google Business Profile? Please share the link so we can connect reviews, directions and the map.", "where": "reviews section, contact page map" }
+        {
+          "fact": "Owner name",
+          "question": "Your current website says the company is owned by Jeff Jordan, while our intake lists Mallory Jordan as the owner. Who should we name as the owner, and should Mallory be listed as office or operations contact?",
+          "where": "about section (owner left unnamed until confirmed)"
+        },
+        {
+          "fact": "Business address",
+          "question": "Your current website shows 305 SW 250th Street, Newberry, FL 32669, but intake gave PO Box 215. Which address should appear publicly, and is the street address a customer-facing location?",
+          "where": "footer NAP, estimate section, LocalBusiness schema"
+        },
+        {
+          "fact": "License number EC 13016035",
+          "question": "We show your Florida electrical contractor license as EC 13016035 (taken from your current website). Is that number current and correct?",
+          "where": "hero chip, FAQ"
+        },
+        {
+          "fact": "Insurance",
+          "question": "Do you carry general liability insurance and workers' compensation? If so, may we say 'licensed and insured' on the site?",
+          "where": "hero chips, FAQ (left out until confirmed)"
+        },
+        {
+          "fact": "Response time",
+          "question": "How quickly do you typically reply to a quote request (same day, within 24 hours, next business day)?",
+          "where": "hero form tagline, estimate dialog, next steps (currently says 'reviewed promptly')"
+        },
+        {
+          "fact": "Quote process",
+          "question": "How do you quote a job: an on-site visit, a written estimate, a diagnostic fee for service calls? Is there any trip charge?",
+          "where": "process step 3 and next steps"
+        },
+        {
+          "fact": "Permits",
+          "question": "Do you pull permits and schedule inspections for the customer on jobs that need them (panel upgrades, new circuits, service changes)?",
+          "where": "FAQ (left out until confirmed)"
+        },
+        {
+          "fact": "Emergency service",
+          "question": "Do you take emergency or after-hours calls? If so, what hours?",
+          "where": "hero chips, storm band (left out until confirmed)"
+        },
+        {
+          "fact": "Business hours",
+          "question": "What are your business hours?",
+          "where": "footer, LocalBusiness schema"
+        },
+        {
+          "fact": "Service area towns",
+          "question": "Which towns beyond Newberry do you regularly serve (Gainesville, Alachua, High Springs, Archer, Jonesville, Trenton)? Is there a mileage limit?",
+          "where": "service-area sentence, area pages"
+        },
+        {
+          "fact": "Generator brands and surge protection",
+          "question": "Which generator brands do you install, do you install transfer switches and whole-home surge protection, and do you do post-storm electrical inspections?",
+          "where": "generator card, storm band"
+        },
+        {
+          "fact": "EV chargers as a service",
+          "question": "Your About page mentions EV charger installations. Should EV charger installation be listed as its own service?",
+          "where": "services grid, ticker"
+        },
+        {
+          "fact": "Job photos and logo",
+          "question": "Please upload original photos of recent jobs (panels, new construction rough-ins, generators, EV chargers, commercial work) and your logo file. The homepage currently uses icon cards and a type-only hero because no photos were supplied.",
+          "where": "hero, service cards, about section, gallery"
+        },
+        {
+          "fact": "Google Business Profile",
+          "question": "Do you have a Google Business Profile? Please share the link so we can connect reviews, directions and the map.",
+          "where": "reviews section, contact page map"
+        }
+      ]
+    },
+    {
+      "path": "/services/",
+      "useful_because": "A visitor who is not sure what to call their job gets a router table that maps six real situations (new home, outdated panel or EV charger, commercial build-out, business system upgrade, outage protection, something stopped working) to the right Jordan Electric service page, plus a one-line index of all four services and the request-to-completion steps. The homepage lists the services; this page tells the customer which one they need.",
+      "needs_confirmation": [
+        {
+          "fact": "Lighting, ceiling fan and outlet installation as listed services",
+          "question": "Do you install new light fixtures, ceiling fans and additional outlets as standalone jobs? If so, we can name them on the services page and in the residential page.",
+          "where": "services hub table, residential page breakdown (left out until confirmed)"
+        }
+      ]
+    },
+    {
+      "path": "/services/residential-electrical/",
+      "useful_because": "A Newberry homeowner or someone building a new home learns the four signs a house needs an electrician (breakers tripping under combined load, older or problem-brand panels such as Federal Pacific Stab-Lok and Zinsco, a new 240-volt load like a Level 2 EV charger, flicker or warm cover plates), sees the six kinds of home work Jordan Electric covers laid out as a panel directory, gets the rough-in/trim-out sequence for new construction, a checklist for vetting any residential electrician against the DBPR license search, and a plain answer on when a City of Newberry or Alachua County permit applies. None of that is on the homepage.",
+      "needs_confirmation": [
+        {
+          "fact": "Permits and inspections",
+          "question": "On residential jobs that need a permit (panel upgrades, new circuits, service changes), do you pull the permit and schedule the inspections for the homeowner?",
+          "where": "residential FAQ (currently tells the customer to confirm with the building department or ask)"
+        },
+        {
+          "fact": "Utility coordination on service upgrades",
+          "question": "When a panel upgrade needs the power disconnected at the meter, do you coordinate that with the utility (City of Newberry, Clay Electric or another provider), or does the homeowner?",
+          "where": "residential process step 4 (left out until confirmed)"
+        },
+        {
+          "fact": "Problem-brand panel replacement",
+          "question": "Do you replace Federal Pacific, Zinsco and fuse-box panels, and is that a common job for you? We mention these brands as general guidance only.",
+          "where": "residential signs section"
+        },
+        {
+          "fact": "Quotes are free",
+          "question": "Are quotes and estimates free for residential work? The homepage currently says 'free quote'; service pages say 'request a quote' until you confirm.",
+          "where": "hero form, final CTA"
+        },
+        {
+          "fact": "Job photos",
+          "question": "Please upload photos of residential work: a new-construction rough-in, a finished panel, an EV charger install. Service pages are type-only until photos arrive.",
+          "where": "hero, recent-work strip, before/after"
+        }
+      ]
+    },
+    {
+      "path": "/services/commercial-electrical/",
+      "useful_because": "A business owner gets a six-item project brief of what to send with a commercial request (use of the space, drawings, what is changing, equipment nameplate ratings, operating hours, target date) that lets the job be scoped around their operations, four signs the business has outgrown its electrical system, the scope Jordan Electric's own site names (new construction, system upgrades, installations, repairs on commercial properties) and a five-question table for comparing commercial electrical contractors.",
+      "needs_confirmation": [
+        {
+          "fact": "Types of commercial buildings served",
+          "question": "Which kinds of commercial work do you take on: offices, retail stores, restaurants, warehouses, agricultural buildings? Any you do not take?",
+          "where": "commercial hero and breakdown (described generically until confirmed)"
+        },
+        {
+          "fact": "Three-phase work",
+          "question": "Do you install or upgrade three-phase electrical service and equipment?",
+          "where": "commercial breakdown (left out until confirmed)"
+        },
+        {
+          "fact": "After-hours or weekend scheduling",
+          "question": "To limit disruption, do you schedule commercial work after hours or on weekends when a business needs it?",
+          "where": "commercial scheduling copy (currently says 'planned around your operating hours')"
+        },
+        {
+          "fact": "Commercial maintenance",
+          "question": "Do you offer scheduled electrical maintenance for businesses (inspections, thermal scans, periodic checks)?",
+          "where": "commercial breakdown (left out until confirmed)"
+        },
+        {
+          "fact": "Insurance certificates",
+          "question": "Can you provide a certificate of insurance to landlords and general contractors on commercial jobs?",
+          "where": "commercial comparison table (left out until confirmed)"
+        }
+      ]
+    },
+    {
+      "path": "/services/generator-installation/",
+      "useful_because": "A homeowner or business owner sees why backup power matters in Newberry specifically (hurricane season June 1 to November 30 with a mid-August to mid-October peak, private wells that stop pumping without power, medical equipment, businesses that cannot close), a month-by-month calendar showing when to plan and install, a five-row portable-versus-standby comparison with the CDC carbon-monoxide distance and the backfeeding hazard, and how Jordan Electric's installs tie the generator into the existing electrical system.",
+      "needs_confirmation": [
+        {
+          "fact": "Generator brands",
+          "question": "Which generator brands do you install? Your current site shows a Generac Guardian Series unit in a photo caption. May we name Generac (and any others) on the page?",
+          "where": "generator breakdown (no brands named until confirmed)"
+        },
+        {
+          "fact": "Portable vs standby",
+          "question": "Do you install standby generators, portable-generator inlet and interlock setups, or both?",
+          "where": "portable vs standby table caption"
+        },
+        {
+          "fact": "Transfer switches",
+          "question": "Do you install automatic and manual transfer switches as part of each generator job?",
+          "where": "generator breakdown (described as 'integration with existing wiring' until confirmed)"
+        },
+        {
+          "fact": "Fuel hookup",
+          "question": "Who connects natural gas or propane to a standby generator: you, the gas supplier, or a plumber you work with?",
+          "where": "generator process (left out until confirmed)"
+        },
+        {
+          "fact": "Permits for generators",
+          "question": "Do you handle the permit and inspection for generator installs?",
+          "where": "generator process step 4"
+        },
+        {
+          "fact": "Surge protection and post-storm inspections",
+          "question": "Do you install whole-home surge protection and do post-storm electrical inspections? The research brief suggested both; neither is on the site yet.",
+          "where": "generator FAQ 'protect my home during storms' (answered with backup power only)"
+        },
+        {
+          "fact": "Maintenance",
+          "question": "Do you service or maintain generators after installation?",
+          "where": "generator breakdown (left out until confirmed)"
+        }
+      ]
+    },
+    {
+      "path": "/services/electrical-repairs/",
+      "useful_because": "Someone with an electrical problem right now gets a six-row symptom triage table (burning smell or hot devices, breakers that trip on reset, sparking or buzzing, flicker in one room vs the whole house, dead outlets with a tripped GFCI elsewhere, outdoor circuits failing after Florida rain) with what each can point to, how urgent it is and what to do safely before the electrician arrives, plus the reasoning behind Jordan Electric's fix-the-source approach versus a quick patch. The homepage only names the service.",
+      "needs_confirmation": [
+        {
+          "fact": "Emergency / after-hours service calls",
+          "question": "Do you take emergency or after-hours repair calls? If yes, what hours and is there a different rate?",
+          "where": "repairs hero, triage table, final CTA (left out until confirmed)"
+        },
+        {
+          "fact": "Response time for service calls",
+          "question": "How soon can you usually get out for a repair call (same day, next day, within the week)?",
+          "where": "repairs process step 2 (currently 'reviewed promptly')"
+        },
+        {
+          "fact": "Diagnostic fee / trip charge",
+          "question": "Do you charge a diagnostic or trip fee for a service call, and is it credited toward the repair?",
+          "where": "repairs FAQ 'what will it cost' (currently tells customers to ask when they call)"
+        },
+        {
+          "fact": "Repair warranty",
+          "question": "Do you guarantee repair work for a period of time?",
+          "where": "patch-vs-source section (left out until confirmed)"
+        }
       ]
     }
   ],

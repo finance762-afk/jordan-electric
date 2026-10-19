@@ -221,3 +221,42 @@ function generateBreadcrumbSchema(array $crumbs): array {
     }
     return ['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => $items];
 }
+
+/**
+ * @graph nodes for a /services/<slug>/ page: Service (@id <url>#service-<slug>, provider -> homepage Electrician
+ * @id), WebPage with Speakable, BreadcrumbList, plus the page's FAQPage node when it shows FAQs.
+ * The page wraps the result: ["@context" => "https://schema.org", "@graph" => p1_service_page_nodes(...)].
+ * $faqNode is generateFAQSchema($faqs) from the page (omit when the page has no FAQs).
+ */
+function p1_service_page_nodes(array $svc, string $url, string $title, string $description, string $serviceType, array $faqNode = []): array {
+    global $siteUrl, $siteName;
+    $base = rtrim($siteUrl, '/');
+    $service = generateServiceSchema($svc, $url);
+    unset($service['@context']);
+    $service['@id'] = $url . '#service-' . $svc['slug'];
+    $service['serviceType'] = $serviceType;
+    $service['description'] = $description;
+    $service['provider'] = ['@id' => p1_org_id(), '@type' => 'Electrician', 'name' => $siteName];
+    $nodes = [
+        $service,
+        ['@type' => 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => $title, 'description' => $description,
+         'about' => ['@id' => $service['@id']], 'isPartOf' => ['@type' => 'WebSite', 'name' => $siteName, 'url' => $base . '/'],
+         'speakable' => ['@type' => 'SpeakableSpecification', 'cssSelector' => ['h1', '.hero-answer', '.answer-block']]],
+    ];
+    $crumbs = generateBreadcrumbSchema([['Home', $base . '/'], ['Services', $base . '/services/'], [$svc['name'], $url]]);
+    unset($crumbs['@context']);
+    $nodes[] = $crumbs;
+    if (!empty($faqNode['mainEntity'])) {
+        unset($faqNode['@context']);
+        $faqNode['@id'] = $url . '#faq';
+        $nodes[] = $faqNode;
+    }
+    return $nodes;
+}
+
+/** The $services row for a slug (empty array when absent). */
+function p1_service_by_slug(string $slugWanted): array {
+    global $services;
+    foreach ((array) $services as $fnSvcRow) if ($fnSvcRow['slug'] === $slugWanted) return $fnSvcRow;
+    return [];
+}
