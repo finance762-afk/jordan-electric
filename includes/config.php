@@ -98,7 +98,12 @@ $businessHours = '';                                   // one-line form for the 
 $colors = ['primary' => '#1f2428', 'secondary' => '#5a6570', 'accent' => '#c8461a'];
 $yearEstablished = 2026;                               // build-plan content: "in business since 2026" (content.years = 0)
 $yearsInBusiness = (int) date('Y') - $yearEstablished;
-$yearsExperience = 20;                                 // client site: "20 years of hands-on experience" — confirm whose
+$yearsExperience = 20;                                 // client site: "over 20 years of hands-on experience" — confirm whose
+
+// ---- Credentials (client's own homepage, jordanelectricllc.net, read 2026-10-19 — confirm at draft review) ----
+$licenseNumber = 'EC 13016035';                        // "Licensed Electrical Contractor, License EC 13016035"
+$licenseType   = 'Florida licensed electrical contractor';
+$licenseLookupUrl = 'https://www.myfloridalicense.com/wl11.asp';   // Florida DBPR public license search
 
 // Short factual description for schema / AEO (build-plan content.description, with the real service names)
 $businessDescription = 'Jordan Electric is an electrician based in Newberry, FL, serving Alachua County. Services include residential electrical services, commercial electrical services, generator installation, and electrical service calls and repairs.';
@@ -132,7 +137,7 @@ $textUsNumber   = '';   // integrations.text_us_number is null (accepts_sms fals
 $financing      = [];   // integrations.financing is null
 $serviceZips    = [];   // integrations.service_zips not provided
 
-$cssVersion = '2';      // the SINGLE framework.css cache-bust; bump here on every framework.css / critical.css change
+$cssVersion = '3';      // the SINGLE framework.css cache-bust; bump here on every framework.css / critical.css change
 
 // ---- Lead attribution (first-touch cookie + p1_attribution_fields()) — must stay last, before any output ----
 require_once __DIR__ . '/attribution.php';

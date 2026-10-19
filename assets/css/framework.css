@@ -68,6 +68,8 @@
   --color-card-tint-3: color-mix(in srgb, var(--color-accent) 10%, white);
   --color-card-tint-neutral: var(--color-paper-2);
   --color-neutral-warm: var(--color-paper-2);
+  /* v8 component aliases (includes/*.php components read these names) */
+  --bg-alt: var(--color-bg-alt); --text-light: var(--color-text-light); --container-max: var(--container); --ba-pos: 50%;
 
   /* Type — 3-font system */
   --font-heading: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;

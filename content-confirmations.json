@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "useful_because": "A Newberry homeowner, builder or business owner can see in one screen what Jordan Electric actually does (new construction wiring, panel upgrades, commercial installations, generator tie-ins and repair calls), check the Florida contractor license number against the state DBPR search, learn the business is family-managed with over 20 years of hands-on experience behind it, and see how a request moves from the quote form to a scheduled job. The storm-season band ties the generator service to Florida's June 1 to November 30 hurricane season, which a generic electrician page does not.",
+      "needs_confirmation": [
+        { "fact": "Owner name", "question": "Your current website says the company is owned by Jeff Jordan, while our intake lists Mallory Jordan as the owner. Who should we name as the owner, and should Mallory be listed as office or operations contact?", "where": "about section (owner left unnamed until confirmed)" },
+        { "fact": "Business address", "question": "Your current website shows 305 SW 250th Street, Newberry, FL 32669, but intake gave PO Box 215. Which address should appear publicly, and is the street address a customer-facing location?", "where": "footer NAP, estimate section, LocalBusiness schema" },
+        { "fact": "License number EC 13016035", "question": "We show your Florida electrical contractor license as EC 13016035 (taken from your current website). Is that number current and correct?", "where": "hero chip, FAQ" },
+        { "fact": "Insurance", "question": "Do you carry general liability insurance and workers' compensation? If so, may we say 'licensed and insured' on the site?", "where": "hero chips, FAQ (left out until confirmed)" },
+        { "fact": "Response time", "question": "How quickly do you typically reply to a quote request (same day, within 24 hours, next business day)?", "where": "hero form tagline, estimate dialog, next steps (currently says 'reviewed promptly')" },
+        { "fact": "Quote process", "question": "How do you quote a job: an on-site visit, a written estimate, a diagnostic fee for service calls? Is there any trip charge?", "where": "process step 3 and next steps" },
+        { "fact": "Permits", "question": "Do you pull permits and schedule inspections for the customer on jobs that need them (panel upgrades, new circuits, service changes)?", "where": "FAQ (left out until confirmed)" },
+        { "fact": "Emergency service", "question": "Do you take emergency or after-hours calls? If so, what hours?", "where": "hero chips, storm band (left out until confirmed)" },
+        { "fact": "Business hours", "question": "What are your business hours?", "where": "footer, LocalBusiness schema" },
+        { "fact": "Service area towns", "question": "Which towns beyond Newberry do you regularly serve (Gainesville, Alachua, High Springs, Archer, Jonesville, Trenton)? Is there a mileage limit?", "where": "service-area sentence, area pages" },
+        { "fact": "Generator brands and surge protection", "question": "Which generator brands do you install, do you install transfer switches and whole-home surge protection, and do you do post-storm electrical inspections?", "where": "generator card, storm band" },
+        { "fact": "EV chargers as a service", "question": "Your About page mentions EV charger installations. Should EV charger installation be listed as its own service?", "where": "services grid, ticker" },
+        { "fact": "Job photos and logo", "question": "Please upload original photos of recent jobs (panels, new construction rough-ins, generators, EV chargers, commercial work) and your logo file. The homepage currently uses icon cards and a type-only hero because no photos were supplied.", "where": "hero, service cards, about section, gallery" },
+        { "fact": "Google Business Profile", "question": "Do you have a Google Business Profile? Please share the link so we can connect reviews, directions and the map.", "where": "reviews section, contact page map" }
+      ]
+    }
+  ],
+  "consolidate": []
+}
