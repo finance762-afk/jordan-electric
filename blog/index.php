@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  */
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/blog-card.php';
 $pageTitle       = 'Electrician Blog: Newberry, FL Guides | Jordan Electric';
-$pageDescription = 'Plain-language electrical guides from Jordan Electric in Newberry, FL: panel upgrade costs, generator planning for hurricane season, permits and more.';
+$pageDescription = 'Plain-language electrical guides from Jordan Electric in Newberry, FL: panel upgrade costs, generator planning for hurricane season, permits and more. Read now.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/blog/';
 $ogImage         = '';

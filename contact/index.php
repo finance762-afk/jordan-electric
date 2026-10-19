@@ -13,7 +13,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  */
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/p1-form-helpers.php';
 $pageTitle       = 'Contact Jordan Electric | Electrician in Newberry, FL';
-$pageDescription = 'Contact Jordan Electric in Newberry, FL: call ' . $phone . ' or send the quote form for residential, commercial, generator and repair work across Alachua County.';
+$pageDescription = 'Contact Jordan Electric in Newberry, FL: call ' . $phone . ' or send the quote form for residential, commercial, generator and repair work in Alachua County.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/contact/';
 $ogImage         = '';
@@ -34,7 +34,7 @@ $conLocalBusiness = [
     'speakable' => ['@type' => 'SpeakableSpecification', 'cssSelector' => ['h1', '.hero-answer']],
 ];
 $schemaBlocks = [[
-    '@context' => 'https://schema.org',
+    "@context" => 'https://schema.org',
     '@graph'   => [
         $conLocalBusiness,
         ['@type' => 'BreadcrumbList', 'itemListElement' => [
@@ -232,7 +232,7 @@ $schemaBlocks = [[
       <div class="svc-head reveal-left">
         <span class="eyebrow">What happens next</span>
         <h2 id="con-next-title">What happens after you contact Jordan Electric?</h2>
-        <p class="answer-block">After you contact Jordan Electric, the request is reviewed promptly and someone follows up to schedule. For project questions you can also read the <a href="/faq/">frequently asked questions</a> or browse the <a href="/services/">electrical services</a>.</p>
+        <p class="answer-block">After you contact Jordan Electric, the request is reviewed promptly and someone follows up to schedule. For project questions you can also read the <a href="/faq/">electrician FAQ</a> or browse the <a href="/services/">electrical services</a>.</p>
       </div>
       <ol class="svc-steps reveal-right">
         <?php foreach ($conSteps as $conI => $conStep): ?>

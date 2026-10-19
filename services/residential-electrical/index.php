@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  */
 $svc             = p1_service_by_slug('residential-electrical');
 $pageTitle       = 'Residential Electrician in Newberry, FL | Jordan Electric';
-$pageDescription = 'Jordan Electric wires new construction homes, upgrades outdated panels and repairs home electrical systems in Newberry, FL and across Alachua County.';
+$pageDescription = 'Jordan Electric wires new construction homes, upgrades outdated panels and repairs home electrical systems in Newberry and Alachua County. Call (352) 472-5511.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/services/residential-electrical/';
 $ogImage         = '';

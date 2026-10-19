@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * The coverage graphic is a schematic (no GBP map embed or geo in the plan) and says so.
  */
 $pageTitle       = 'Newberry & Alachua County Service Areas | Jordan Electric';
-$pageDescription = 'Jordan Electric is an electrician based in Newberry, FL, serving homes and businesses across Alachua County. See the service area and confirm your address.';
+$pageDescription = 'Jordan Electric is an electrician based in Newberry, FL, serving homes and businesses across Alachua County. Call (352) 472-5511 to confirm your address.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/service-areas/';
 $ogImage         = '';

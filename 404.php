@@ -22,7 +22,7 @@ $nfLinks = [
     ['/services/',                          'zap',          'Electrical services',          'Residential, commercial, generators and repairs'],
     ['/services/residential-electrical/',   'house',        'Residential electrical',       'New homes, panel upgrades and wiring'],
     ['/services/electrical-repairs/',       'wrench',       'Service calls and repairs',    'Outlets, lighting and tripping breakers'],
-    ['/faq/',                               'info',         'Frequently asked questions',   'Licensing, permits, pricing and process'],
+    ['/faq/',                               'info',         'Electrician FAQ',              'Licensing, permits, pricing and process'],
     ['/about/',                             'users',        'About Jordan Electric',        'A family-managed Newberry electrician'],
     ['/contact/',                           'mail',         'Contact us',                   'Send the form or call ' . $phone],
 ];

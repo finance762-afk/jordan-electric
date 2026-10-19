@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  */
 $svc             = p1_service_by_slug('commercial-electrical');
 $pageTitle       = 'Commercial Electrician in Newberry, FL | Jordan Electric';
-$pageDescription = 'Commercial electrical contractor in Newberry, FL: new construction, system upgrades and installations for Alachua County businesses, planned around operations.';
+$pageDescription = 'Commercial electrical contractor in Newberry, FL: new construction, system upgrades and installations for Alachua County businesses. Call (352) 472-5511.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/services/commercial-electrical/';
 $ogImage         = '';

@@ -20,7 +20,7 @@ $bpPost = [];
 foreach ($blogPosts as $bpRow) if ($bpRow['slug'] === $bpSlug) $bpPost = $bpRow;
 
 $pageTitle       = $bpPost['title'];
-$pageDescription = 'What changes the price of an electrical panel upgrade in Newberry, FL: amperage, the service connection, permits and the utility. Plus signs your panel is due.';
+$pageDescription = 'What changes the price of an electrical panel upgrade in Newberry, FL: amperage, service connection, permits and the utility. Call (352) 472-5511 for a quote.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/blog/' . $bpSlug . '/';
 $ogImage         = '';

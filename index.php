@@ -10,7 +10,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Anything the page wanted but intake did not supply is listed in /content-confirmations.json, not invented here.
  */
 $pageTitle       = 'New Home Electrician in Newberry, FL | Jordan Electric';
-$pageDescription = 'Jordan Electric is a licensed Newberry, FL electrician wiring new construction homes, plus commercial work, generator installs and repairs across Alachua County.';
+$pageDescription = 'Jordan Electric is a licensed Newberry, FL electrician wiring new construction homes, plus commercial work and generators locally. Call (352) 472-5511.';
 $metaDescription = $pageDescription;              // head.php reads $metaDescription
 $canonicalUrl    = $siteUrl . '/';
 $ogImage         = '';                            // no client photo on disk yet; head.php falls back to og-default.jpg if added
@@ -168,6 +168,7 @@ $schemaBlocks = $schemaMarkup;                    // head.php renders $schemaBlo
   pointer-events: none;
 }
 .home-hero .hero-form-card { position: relative; }
+.home-hero .hf-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xs); }
 /* Primary CTAs on the dark bands take the accent: the scaffold's ink-dark btn-primary vanishes on --color-dark */
 .home-hero .hero-form-open, .home-storm .btn-primary {
   background: var(--color-accent);
@@ -529,9 +530,9 @@ $schemaBlocks = $schemaMarkup;                    // head.php renders $schemaBlo
       <div class="hero-text">
         <span class="eyebrow"><?php echo p1_esc($address['city'] . ', ' . $address['state']); ?> · <?php echo p1_esc($primaryCounty); ?></span>
         <h1 class="hero-title" id="home-hero-title">New home electrician in <span class="text-accent">Newberry, FL</span></h1>
-        <p class="hero-answer">Jordan Electric wires new homes, businesses and generators in Alachua County.</p>
+        <p class="hero-answer">Jordan Electric, a licensed Florida electrical contractor based in Newberry, wires new homes and businesses, installs backup generators, and repairs faulty outlets, lighting and systems across Alachua County. Call or send the form to schedule your estimate.</p>
         <div class="hero-actions">
-          <button type="button" class="btn btn-primary btn-lg hero-form-open" data-open-estimate>Get a free quote</button>
+          <button type="button" class="btn btn-primary btn-lg hero-form-open" data-open-estimate>Get a quote</button>
           <a class="link-call" href="tel:<?php echo p1_esc($phoneE164); ?>"><?php icon('phone', 18); ?>or call <?php echo p1_esc($phone); ?></a>
         </div>
         <ul class="hero-chips">
@@ -544,7 +545,7 @@ $schemaBlocks = $schemaMarkup;                    // head.php renders $schemaBlo
       <div class="home-hero__visual">
         <span class="home-hero__spark" aria-hidden="true"><?php icon('zap', 22); ?></span>
         <aside class="hero-form-card" id="estimate-form" aria-labelledby="hero-form-title">
-          <h2 id="hero-form-title">Get a free quote</h2>
+          <h2 id="hero-form-title">Get a quote</h2>
           <p class="hero-form-tagline">No obligation. Every request is reviewed promptly.</p>
           <form id="hero" action="<?php echo p1_esc($formAction); ?>" method="POST" class="hero-form">
             <input type="hidden" name="_next" value="<?= htmlspecialchars($siteUrl) ?>/thank-you">
@@ -564,7 +565,7 @@ $schemaBlocks = $schemaMarkup;                    // head.php renders $schemaBlo
               </select>
             </div>
             <label class="consent" for="hero-terms"><input id="hero-terms" type="checkbox" name="terms_accepted" value="yes" required><span>I agree to the <a href="/terms/" target="_blank" rel="noopener">Terms</a> and <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> and consent to be contacted. *</span></label>
-            <button type="submit" class="btn btn-primary btn-block">Get my free quote</button>
+            <button type="submit" class="btn btn-primary btn-block">Get my quote</button>
           </form>
         </aside>
       </div>
@@ -747,7 +748,7 @@ if ($homeReviews !== ''): ?>
 <section class="section home-estimate" id="estimate" aria-labelledby="home-estimate-title">
   <div class="container estimate">
     <div class="card reveal-up">
-      <span class="eyebrow">Free quote</span>
+      <span class="eyebrow">Request a quote</span>
       <h2 id="home-estimate-title">Tell us about the job</h2>
       <p>New construction, a commercial project, a generator or a repair call: a few details get the right electrician looking at it.</p>
       <form id="estimate-section-form" action="<?php echo p1_esc($formAction); ?>" method="POST" class="estimate-form">

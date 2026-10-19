@@ -262,20 +262,18 @@ function p1_service_by_slug(string $slugWanted): array {
 }
 
 /**
- * @graph for a compliance page (privacy-policy, terms, cookie-policy, accessibility): WebPage + BreadcrumbList.
+ * @graph nodes for a compliance page (privacy-policy, terms, cookie-policy, accessibility): WebPage + BreadcrumbList.
+ * The page wraps the result: ["@context" => "https://schema.org", "@graph" => p1_legal_page_nodes(...)].
  * Compliance pages are indexable informational pages — no Service, no FAQPage.
  */
-function p1_legal_page_schema(string $name, string $url, string $title, string $description): array {
+function p1_legal_page_nodes(string $name, string $url, string $title, string $description): array {
     global $siteUrl, $siteName;
     $base = rtrim($siteUrl, '/');
     $crumbs = generateBreadcrumbSchema([['Home', $base . '/'], [$name, $url]]);
     unset($crumbs['@context']);
     return [
-        '@context' => 'https://schema.org',
-        '@graph'   => [
-            ['@type' => 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => $title, 'description' => $description,
-             'isPartOf' => ['@type' => 'WebSite', 'name' => $siteName, 'url' => $base . '/'], 'about' => ['@id' => p1_org_id()]],
-            $crumbs,
-        ],
+        ['@type' => 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => $title, 'description' => $description,
+         'isPartOf' => ['@type' => 'WebSite', 'name' => $siteName, 'url' => $base . '/'], 'about' => ['@id' => p1_org_id()]],
+        $crumbs,
     ];
 }

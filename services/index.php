@@ -10,7 +10,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  */
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-cards.php';
 $pageTitle       = 'Electrical Services in Newberry, FL | Jordan Electric';
-$pageDescription = 'Residential and commercial electrical services, generator installation and electrical repairs from Jordan Electric in Newberry, FL, serving Alachua County.';
+$pageDescription = 'Residential and commercial electrical services, generator installation and repairs from Jordan Electric in Newberry, FL. Call (352) 472-5511 to start.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/services/';
 $ogImage         = '';

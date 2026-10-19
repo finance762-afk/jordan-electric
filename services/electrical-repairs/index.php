@@ -10,8 +10,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * NOT claimed (open questions in /content-confirmations.json). Symptom guidance is general safety information.
  */
 $svc             = p1_service_by_slug('electrical-repairs');
-$pageTitle       = 'Electrical Repair in Newberry, FL | Jordan Electric';
-$pageDescription = 'Electrical troubleshooting and repair in Newberry, FL: faulty outlets, lighting problems and system failures at homes and businesses across Alachua County.';
+$pageTitle       = 'Electrical Repair and Troubleshooting in Newberry, FL';
+$pageDescription = 'Electrical troubleshooting and repair in Newberry, FL: faulty outlets, lighting problems and system failures at homes and businesses. Call (352) 472-5511.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/services/electrical-repairs/';
 $ogImage         = '';

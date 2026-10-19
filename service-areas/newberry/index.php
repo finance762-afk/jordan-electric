@@ -33,8 +33,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * content-confirmations.json), residential + commercial + generators + repairs. No frequency-of-work claims about Newberry.
  * Permits, free quotes and response times are NOT claimed (open questions in content-confirmations.json).
  */
-$pageTitle       = 'New Home Electrician in Newberry, FL | Jordan Electric';
-$pageDescription = 'Jordan Electric wires new homes and businesses in Newberry, FL, with generators and repairs across Alachua County. Florida license EC 13016035.';
+$pageTitle       = 'Electrician in Newberry, FL: Wiring and Generators | Jordan';
+$pageDescription = 'Jordan Electric wires new homes and businesses in Newberry, FL, with generators and repairs across Alachua County. License EC 13016035. Call (352) 472-5511.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/service-areas/newberry/';
 $ogImage         = '';

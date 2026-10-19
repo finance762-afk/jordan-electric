@@ -111,7 +111,7 @@ $footSvcNames = array_map('strtolower', array_column($services, 'name')); // ent
 <dialog class="estimate-dialog" id="estimate-dialog" aria-labelledby="estimate-dialog-title">
   <div class="dialog-head">
     <div>
-      <h3 id="estimate-dialog-title">Request a free quote</h3>
+      <h3 id="estimate-dialog-title">Request a quote</h3>
       <p class="footnote">Every request is reviewed promptly, and we follow up to schedule.</p>
     </div>
     <button type="button" class="dialog-close" aria-label="Close" data-close-estimate><?php icon('x', 20); ?></button>

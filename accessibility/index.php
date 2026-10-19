@@ -6,10 +6,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
 /* ---- Page setup: Accessibility Statement (legal-compliance.md, Accessibility template) --------------------------
  * Feature list matches what includes/header.php, framework.css and main.js really ship: skip link, landmarks,
  * :focus-visible ring, labelled form fields, aria-expanded/aria-current, reduced-motion support, native <dialog>
- * and <details> (keyboard operable). Conformance is stated as "partial" until an audit says otherwise.
+ * and native disclosure elements (keyboard operable). Conformance is stated as "partial" until an audit says otherwise.
  */
 $pageTitle       = 'Accessibility Statement | Jordan Electric, Newberry, FL';
-$pageDescription = 'Jordan Electric LLC works to meet WCAG 2.1 Level AA on this website. Accessibility features, known limits and how to reach us in Newberry, FL.';
+$pageDescription = 'Jordan Electric LLC works to meet WCAG 2.1 Level AA on this website. Read about accessibility features and known limits, or call (352) 472-5511 for help.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/accessibility/';
 $ogImage         = '';
@@ -19,7 +19,7 @@ $bodyClass       = 'legal-page';
 $lastUpdated     = 'October 19, 2026';
 $legalName       = 'Accessibility Statement';
 $legalSub        = 'Our commitment to a website everyone can use, and how to tell us when it falls short.';
-$schemaBlocks    = [p1_legal_page_schema($legalName, $canonicalUrl, $pageTitle, $pageDescription)];
+$schemaBlocks    = [["@context" => "https://schema.org", "@graph" => p1_legal_page_nodes($legalName, $canonicalUrl, $pageTitle, $pageDescription)]];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
@@ -27,7 +27,23 @@ $schemaBlocks    = [p1_legal_page_schema($legalName, $canonicalUrl, $pageTitle, 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/legal-page.css'; ?>
 </style>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/legal-hero.php'; ?>
+<section class="hero hero--legal" aria-labelledby="legal-title">
+  <span class="grain" aria-hidden="true"></span>
+  <div class="container">
+    <div class="hero-legal__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li><li class="breadcrumb-sep" aria-hidden="true">/</li>
+          <li><span aria-current="page"><?php echo p1_esc($legalName); ?></span></li>
+        </ol>
+      </nav>
+      <span class="eyebrow">Legal</span>
+      <h1 id="legal-title"><?php echo p1_esc($legalName); ?></h1>
+      <p class="hero-legal__sub"><?php echo p1_esc($legalSub); ?></p>
+      <p class="hero-legal__date">Last updated: <?php echo p1_esc($lastUpdated); ?></p>
+    </div>
+  </div>
+</section>
 
 <section class="legal-body">
   <div class="container-narrow">

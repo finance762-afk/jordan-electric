@@ -10,8 +10,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Fonts are self-hosted, so no font-provider cookies. No map or reviews widget is embedded yet.
  * Update this page when GA4 is switched on or an embed is added.
  */
-$pageTitle       = 'Cookie Policy | Jordan Electric, Newberry, FL';
-$pageDescription = 'The cookies and browser storage the Jordan Electric LLC website uses in Newberry, FL, why we use them, and how to control or opt out of them.';
+$pageTitle       = 'Cookie Policy | Jordan Electric Electrician, Newberry, FL';
+$pageDescription = 'The cookies and browser storage the Jordan Electric LLC website uses in Newberry, FL, why they are used, and how to control or opt out. Call (352) 472-5511.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/cookie-policy/';
 $ogImage         = '';
@@ -21,7 +21,7 @@ $bodyClass       = 'legal-page';
 $lastUpdated     = 'October 19, 2026';
 $legalName       = 'Cookie Policy';
 $legalSub        = 'The small files and browser storage this site uses, in plain terms.';
-$schemaBlocks    = [p1_legal_page_schema($legalName, $canonicalUrl, $pageTitle, $pageDescription)];
+$schemaBlocks    = [["@context" => "https://schema.org", "@graph" => p1_legal_page_nodes($legalName, $canonicalUrl, $pageTitle, $pageDescription)]];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
@@ -29,7 +29,23 @@ $schemaBlocks    = [p1_legal_page_schema($legalName, $canonicalUrl, $pageTitle, 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/legal-page.css'; ?>
 </style>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/legal-hero.php'; ?>
+<section class="hero hero--legal" aria-labelledby="legal-title">
+  <span class="grain" aria-hidden="true"></span>
+  <div class="container">
+    <div class="hero-legal__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li><li class="breadcrumb-sep" aria-hidden="true">/</li>
+          <li><span aria-current="page"><?php echo p1_esc($legalName); ?></span></li>
+        </ol>
+      </nav>
+      <span class="eyebrow">Legal</span>
+      <h1 id="legal-title"><?php echo p1_esc($legalName); ?></h1>
+      <p class="hero-legal__sub"><?php echo p1_esc($legalSub); ?></p>
+      <p class="hero-legal__date">Last updated: <?php echo p1_esc($lastUpdated); ?></p>
+    </div>
+  </div>
+</section>
 
 <section class="legal-body">
   <div class="container-narrow">

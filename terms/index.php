@@ -10,7 +10,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Governing law is Florida because that is where Jordan Electric is licensed and works; the formation state is
  * unconfirmed (see config.php). Fixed "Last updated" date, not date().
  */
-$pageTitle       = 'Terms of Service | Jordan Electric, Newberry, FL';
+$pageTitle       = 'Terms of Service | Jordan Electric Electrician, Newberry, FL';
 $pageDescription = 'Terms of Service for the Jordan Electric LLC website and electrical services in Newberry, FL: estimates, project work, warranties, payment and governing law.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/terms/';
@@ -21,7 +21,7 @@ $bodyClass       = 'legal-page';
 $lastUpdated     = 'October 19, 2026';
 $legalName       = 'Terms of Service';
 $legalSub        = 'The ground rules for using this site and for hiring Jordan Electric.';
-$schemaBlocks    = [p1_legal_page_schema($legalName, $canonicalUrl, $pageTitle, $pageDescription)];
+$schemaBlocks    = [["@context" => "https://schema.org", "@graph" => p1_legal_page_nodes($legalName, $canonicalUrl, $pageTitle, $pageDescription)]];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
@@ -29,7 +29,23 @@ $schemaBlocks    = [p1_legal_page_schema($legalName, $canonicalUrl, $pageTitle, 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/legal-page.css'; ?>
 </style>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/legal-hero.php'; ?>
+<section class="hero hero--legal" aria-labelledby="legal-title">
+  <span class="grain" aria-hidden="true"></span>
+  <div class="container">
+    <div class="hero-legal__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li><li class="breadcrumb-sep" aria-hidden="true">/</li>
+          <li><span aria-current="page"><?php echo p1_esc($legalName); ?></span></li>
+        </ol>
+      </nav>
+      <span class="eyebrow">Legal</span>
+      <h1 id="legal-title"><?php echo p1_esc($legalName); ?></h1>
+      <p class="hero-legal__sub"><?php echo p1_esc($legalSub); ?></p>
+      <p class="hero-legal__date">Last updated: <?php echo p1_esc($lastUpdated); ?></p>
+    </div>
+  </div>
+</section>
 
 <section class="legal-body">
   <div class="container-narrow">

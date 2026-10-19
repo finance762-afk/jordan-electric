@@ -9,8 +9,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * until the client's measurement ID is set. Nothing is uploaded, nothing is sold. The "Last updated" date is fixed
  * (not date('F j, Y')) so it only moves when the text does.
  */
-$pageTitle       = 'Privacy Policy | Jordan Electric, Newberry, FL';
-$pageDescription = 'How Jordan Electric LLC in Newberry, FL collects, uses and protects your information, including quote forms, text-message consent and your privacy rights.';
+$pageTitle       = 'Privacy Policy and SMS Terms | Jordan Electric, Newberry';
+$pageDescription = 'How Jordan Electric LLC in Newberry, FL collects, uses and protects your information, including quote forms and text-message consent. Call (352) 472-5511.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/privacy-policy/';
 $ogImage         = '';
@@ -20,7 +20,7 @@ $bodyClass       = 'legal-page';
 $lastUpdated     = 'October 19, 2026';
 $legalName       = 'Privacy Policy';
 $legalSub        = 'What Jordan Electric collects when you use this site or request a quote, and what you can do about it.';
-$schemaBlocks    = [p1_legal_page_schema($legalName, $canonicalUrl, $pageTitle, $pageDescription)];
+$schemaBlocks    = [["@context" => "https://schema.org", "@graph" => p1_legal_page_nodes($legalName, $canonicalUrl, $pageTitle, $pageDescription)]];
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
@@ -28,7 +28,23 @@ $schemaBlocks    = [p1_legal_page_schema($legalName, $canonicalUrl, $pageTitle, 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/legal-page.css'; ?>
 </style>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/legal-hero.php'; ?>
+<section class="hero hero--legal" aria-labelledby="legal-title">
+  <span class="grain" aria-hidden="true"></span>
+  <div class="container">
+    <div class="hero-legal__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li><li class="breadcrumb-sep" aria-hidden="true">/</li>
+          <li><span aria-current="page"><?php echo p1_esc($legalName); ?></span></li>
+        </ol>
+      </nav>
+      <span class="eyebrow">Legal</span>
+      <h1 id="legal-title"><?php echo p1_esc($legalName); ?></h1>
+      <p class="hero-legal__sub"><?php echo p1_esc($legalSub); ?></p>
+      <p class="hero-legal__date">Last updated: <?php echo p1_esc($lastUpdated); ?></p>
+    </div>
+  </div>
+</section>
 
 <section class="legal-body">
   <div class="container-narrow">

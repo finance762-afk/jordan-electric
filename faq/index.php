@@ -12,8 +12,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * Answers are trusted HTML constants (links only); the FAQPage schema strips tags. FAQPage is an AI-comprehension
  * aid, not a rich-result feature. Lead form: one mid-page .cta-band after the first category (v6.3), no hero form.
  */
-$pageTitle       = 'Electrician FAQ | Jordan Electric, Newberry, FL';
-$pageDescription = 'Answers from Jordan Electric in Newberry, FL: licensing, service area, new home wiring, panels, generators, permits, how quotes work and what to do before we arrive.';
+$pageTitle       = 'Electrician FAQ: Licensing and Quotes | Jordan Electric';
+$pageDescription = 'Answers from Jordan Electric in Newberry, FL: licensing, service area, new home wiring, panels, generators, permits and quotes. Call (352) 472-5511 to ask.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/faq/';
 $ogImage         = '';
@@ -105,7 +105,7 @@ foreach ($faqCats as $faqCat) { foreach ($faqCat['faqs'] as $faqRow) { $faqAll[]
 $faqCount = count($faqAll);
 
 $schemaBlocks = [[
-    '@context' => 'https://schema.org',
+    "@context" => 'https://schema.org',
     '@graph'   => array_merge([
         ['@type' => 'WebPage', '@id' => $canonicalUrl . '#webpage', 'url' => $canonicalUrl, 'name' => $pageTitle, 'description' => $pageDescription,
          'isPartOf' => ['@type' => 'WebSite', 'name' => $siteName, 'url' => rtrim($siteUrl, '/') . '/'],

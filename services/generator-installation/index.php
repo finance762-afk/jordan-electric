@@ -12,7 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  */
 $svc             = p1_service_by_slug('generator-installation');
 $pageTitle       = 'Generator Installation in Newberry, FL | Jordan Electric';
-$pageDescription = 'Backup generator installation for homes and businesses in Newberry, FL and Alachua County, safely tied into your existing electrical system before storm season.';
+$pageDescription = 'Backup generator installation for homes and businesses in Newberry, FL and Alachua County, tied into your wiring before storm season. Call (352) 472-5511.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/services/generator-installation/';
 $ogImage         = '';

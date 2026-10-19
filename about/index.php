@@ -13,8 +13,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * section has room for a split photo once job photos arrive. No gradient stand-ins are used.
  * Lead form: one mid-page .cta-band (v6.3), never a hero form on About.
  */
-$pageTitle       = 'About Jordan Electric | Family-Managed Electrician in Newberry, FL';
-$pageDescription = 'Jordan Electric is a family-managed electrical contractor in Newberry, FL with over 20 years of hands-on experience, serving homes and businesses across Alachua County.';
+$pageTitle       = 'About Jordan Electric | Family-Managed in Newberry, FL';
+$pageDescription = 'Jordan Electric is a family-managed electrical contractor in Newberry, FL with over 20 years of hands-on experience in Alachua County. Call (352) 472-5511.';
 $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/about/';
 $ogImage         = '';
@@ -43,7 +43,7 @@ $aboutCredentials = [
 ];
 
 $schemaBlocks = [[
-    '@context' => 'https://schema.org',
+    "@context" => 'https://schema.org',
     '@graph'   => [
         ['@type' => 'AboutPage', '@id' => $canonicalUrl . '#webpage', 'url' => $canonicalUrl, 'name' => $pageTitle, 'description' => $pageDescription,
          'isPartOf' => ['@type' => 'WebSite', 'name' => $siteName, 'url' => rtrim($siteUrl, '/') . '/'],
@@ -242,7 +242,7 @@ $schemaBlocks = [[
         <p>An early interest in electricity turned into a career, and opening a local shop became both a personal and a professional goal. Jordan Electric is that shop: a family-managed company rooted in Alachua County.</p>
         <p>That experience spans residential service calls, new construction homes, commercial projects, system upgrades, troubleshooting, EV charger installations and backup generator systems. Whether the job is a single circuit or a whole building, the approach is the same: safety first, precision on every connection, and work that lasts.</p>
         <p>Being local matters in practice. Jordan Electric works in the same Alachua County neighborhoods, on the same kinds of homes and businesses, and under the same local building departments as the people it serves, so a question about a job in Newberry gets an answer from someone who works here.</p>
-        <p class="prose">Not sure which service fits? Start with the <a href="/services/">electrical services overview</a>, or read the answers on the <a href="/faq/">frequently asked questions</a> page.</p>
+        <p class="prose">Not sure which service fits? Start with the <a href="/services/">electrical services overview</a>, or read the answers on the <a href="/faq/">electrician FAQ</a> page.</p>
       </div>
       <aside class="ab-plate reveal-right" aria-label="Jordan Electric at a glance">
         <div class="ab-plate__head"><span><?php echo p1_esc($siteName); ?></span><?php icon('zap', 28); ?></div>
