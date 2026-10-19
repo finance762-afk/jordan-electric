@@ -10,18 +10,18 @@
 
 /* === Self-hosted fonts (v6.2 — no Google Fonts CDN) === */
 @font-face {
-  font-family: 'Bricolage Grotesque';
+  font-family: 'Space Grotesk';
   font-style: normal;
-  font-weight: 400 800;
+  font-weight: 300 700;
   font-display: swap;
-  src: url('/assets/fonts/bricolage-grotesque.woff2') format('woff2');
+  src: url('/assets/fonts/space-grotesk.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Figtree';
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 400 900;
+  font-weight: 100 900;
   font-display: swap;
-  src: url('/assets/fonts/figtree.woff2') format('woff2');
+  src: url('/assets/fonts/inter.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Barlow Condensed';
@@ -70,8 +70,8 @@
   --color-neutral-warm: var(--color-paper-2);
 
   /* Type — 3-font system */
-  --font-heading: "Bricolage Grotesque", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --font-body: "Figtree", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-heading: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   --font-accent: "Barlow Condensed", 'Arial Narrow', 'Roboto Condensed', sans-serif;
 
   /* Fluid scale. H1 tops out ~42px desktop; pages never raise it. */
@@ -605,3 +605,73 @@ html.js-anim .reveal-d1, html.js-anim .reveal-delay-1 { transition-delay: .08s }
 .hero-visual .hero-form-card { position: absolute; left: -2rem; bottom: 1.5rem; width: 320px; z-index: 3; display: grid; }
 @media (max-width: 1120px) { .hero-visual .hero-form-card { left: 1rem; } }
 @media (max-width: 900px) { .hero-grid--visual { grid-template-columns: 1fr; gap: 1.5rem; } .hero-visual { min-height: 0; aspect-ratio: 16 / 10; } .hero-visual__img { right: 0; border-radius: var(--radius-lg); } .hero-visual .hero-form-card { display: none; } }
+
+/* ============================================================================
+   Phase 2 additions (header / footer / head) — 2026-10-19
+   ============================================================================ */
+
+/* --- Mandatory base rules (Phase 2 prompt). Notes on what was adapted and why:
+   · `section.hero { padding: 0 }` is NOT emitted: it out-specifies `.hero` and pushes the H1 under the fixed header
+     (removed from this file on 2026-09-04 for exactly that reason). `.hero` keeps its own header-clearing padding.
+   · Section overflow stays `overflow-x: clip` (declared above) — `hidden` creates a scroll container and traps
+     position:sticky; clip gives the same no-bleed result.
+   · `.container` already centres with a fluid gutter via width:min(); adding padding on top would double the gutter. --- */
+section { padding: clamp(4rem, 10vh, 8rem) 0; position: relative; overflow-x: clip; }
+@media (max-width: 768px) { section { padding-block: var(--section-pad-mobile); } }
+h1, h2, h3, h4 { text-wrap: balance; overflow-wrap: anywhere; }
+p { overflow-wrap: anywhere; }
+.container { max-width: 1200px; margin-inline: auto; }
+
+/* --- Text logo (no logo file on this build): initial mark + name block --- */
+.logo-mark { position: relative; flex: 0 0 auto; display: grid; place-items: center; width: 46px; height: 46px; border-radius: var(--radius-md); background: var(--color-primary); color: #fff; font-family: var(--font-heading); font-weight: 700; font-size: 1.65rem; line-height: 1; letter-spacing: 0; }
+.logo-mark::after { content: ""; position: absolute; right: -3px; bottom: -3px; width: 12px; height: 12px; border-radius: var(--radius-full); background: var(--color-accent); border: 2px solid var(--color-paper); }
+.logo-text { display: grid; gap: .1rem; }
+.site-header--dark .logo-mark::after { border-color: var(--color-dark); }
+
+/* --- Dropdown polish: crawlable parent link + chevron, hover bridge, current state --- */
+.navbar-links > li > a svg { width: 14px; height: 14px; opacity: .65; transition: transform .2s var(--ease); }
+.navbar-links > .has-dropdown:hover > a svg, .navbar-links > .has-dropdown:focus-within > a svg { transform: rotate(180deg); }
+.navbar-links > .has-dropdown::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: .5rem; }
+.navbar-links .dropdown a[aria-current="page"] { background: var(--color-paper-2); color: var(--color-ink); font-weight: 600; }
+.navbar-links > li > a[aria-current="page"] { color: var(--color-ink); }
+@media (max-width: 1180px) { .navbar-cta .navbar-phone span { display: none; } .navbar-cta .btn.navbar-phone { padding-inline: .8rem; } }
+
+/* --- Mobile menu CTA buttons on the dark overlay --- */
+.mobile-menu-cta .btn-primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-ink); }
+.mobile-menu-cta .btn-outline-white svg, .mobile-menu-cta .btn-primary svg { flex: 0 0 auto; }
+.mobile-menu .mobile-submenu { grid-template-columns: 1fr; }
+.mobile-menu .mobile-submenu a { min-height: 44px; display: flex; align-items: center; }
+
+/* --- Footer --- */
+.footer-top { padding-bottom: 1rem; }
+.site-footer .brand { margin-right: 0; color: #fff; }
+.site-footer .brand-name, .site-footer .logo-name { color: #fff; }
+.site-footer .brand-sub { color: rgba(255,255,255,.65); }
+.site-footer .logo-mark { background: #fff; color: var(--color-primary); }
+.site-footer .logo-mark::after { border-color: var(--color-dark); }
+.footer-brand > p { margin-top: 1rem; max-width: 34ch; }
+.site-footer .footer-subhead { margin-top: 1.6rem; }
+.footer-more { display: inline-flex; align-items: center; gap: .35rem; margin-top: .8rem; font-weight: 600; font-size: .92rem; color: #fff; text-decoration: none; min-height: 44px; }
+.footer-more:hover { text-decoration: underline; }
+.footer-contact a:hover { text-decoration: underline; }
+.footer-cta { margin-top: 1.2rem; background: var(--color-accent); border-color: var(--color-accent); color: var(--color-ink); }
+.footer-cta:hover { background: var(--color-accent-bright); color: var(--color-ink); }
+.footer-entity { max-width: none; }
+.footer-bottom-bar { margin-top: 2rem; border-top: 1px solid rgba(255,255,255,.12); padding: .6rem 0 1.4rem; }
+.footer-bottom-bar .footer-bottom-inner { display: grid; grid-template-columns: minmax(0, 1fr); justify-content: stretch; gap: .2rem; }
+.footer-legal-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .85rem; font-size: .8rem; }
+.footer-legal-row .divider { opacity: .35; }
+.footer-legal-row a { color: rgba(255,255,255,.7); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.footer-legal-row a:hover { color: #fff; text-decoration: underline; }
+.footer-copyright-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .3rem 1.5rem; font-size: .8rem; color: rgba(255,255,255,.6); }
+.footer-copyright-row p { margin: 0; }
+.footer-credit a { color: rgba(255,255,255,.75); text-decoration: underline; text-underline-offset: 3px; }
+.back-to-top svg { transform: rotate(180deg); }
+
+/* --- .hero--type (minimal-tech archetype hero): the scaffold only restyled eyebrow/answer/chips for --photo and --interior,
+   so on this dark ground they inherited dark ink and vanished. Mirrors the --photo rules. --- */
+.hero--type .eyebrow, .hero--type .hero-eyebrow { color: var(--color-accent-bright); }
+.hero--type .hero-answer, .hero--type .hero-subtitle { color: rgba(255,255,255,.85); }
+.hero--type .text-accent { color: var(--color-accent-bright); }
+.hero--type .hero-chips li, .hero--type .hero-trust-item { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); color: #fff; }
+.hero--type .hero-chips svg { color: var(--color-accent-bright); }
