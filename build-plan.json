@@ -1,0 +1,203 @@
+{
+  "seo": {
+    "serp_context": null,
+    "target_radius": 25,
+    "primary_keyword": "New Home Electrician",
+    "secondary_keywords": [
+      "Electrician near me",
+      "Local electrician",
+      "Licensed electrician",
+      "Residential electrician",
+      "Commercial electrician",
+      "Emergency electrician",
+      "Affordable electrician",
+      "Best electrician near me",
+      "Electrical repair services",
+      "Electrical wiring",
+      "Electrical panel upgrade",
+      "Circuit breaker repair",
+      "Electrical outlet installation",
+      "Lighting installation",
+      "Ceiling fan installation",
+      "Electrical troubleshooting",
+      "Generator installation",
+      "EV charger installation",
+      "Whole-house rewiring",
+      "Electrical maintenance",
+      "Commercial electrician near me",
+      "Commercial electrical contractor",
+      "Commercial electrical services",
+      "Commercial electrical company",
+      "Licensed commercial electrician",
+      "Commercial electrical repair",
+      "Commercial electrical installation",
+      "Commercial electrical maintenance",
+      "Electrical maintenance for businesses",
+      "Office electrical installation",
+      "Warehouse electrical services",
+      "Retail store electrical contractor",
+      "Restaurant electrical contractor",
+      "Three-phase electrical installation",
+      "Electrician"
+    ]
+  },
+  "tier": "premium",
+  "email": "mallory@jordanelectricllc.net",
+  "pages": [],
+  "phone": "(352) 472-5511",
+  "assets": {
+    "logo": null,
+    "images": [],
+    "page_allocations": null,
+    "recommended_hero_image": null
+  },
+  "design": {
+    "fonts": {},
+    "notes": "",
+    "style": "modern",
+    "colors": {
+      "extracted_from_logo": true
+    },
+    "logo_analysis": {}
+  },
+  "domain": "jordan-electric",
+  "phases": [
+    {
+      "name": "scaffold",
+      "phase": 1,
+      "status": "pending"
+    },
+    {
+      "name": "nav_footer_head",
+      "phase": 2,
+      "status": "pending"
+    },
+    {
+      "name": "homepage",
+      "phase": 3,
+      "status": "pending"
+    },
+    {
+      "name": "inner_pages",
+      "phase": 4,
+      "status": "pending"
+    },
+    {
+      "name": "seo_aeo_deploy",
+      "phase": 5,
+      "status": "pending"
+    }
+  ],
+  "address": {
+    "zip": "32669",
+    "city": "Newberry",
+    "state": "FL",
+    "street": "Po box 215"
+  },
+  "content": {
+    "usps": [],
+    "years": 0,
+    "insurance": "",
+    "description": "Jordan Electric is a local business serving Newberry, FL and the surrounding area, in business since 2026. Services include New Home Electrician, Electrician near me, Local electrician and Licensed electrician. Contact Jordan Electric at (352) 472-5511 for availability and pricing.",
+    "certifications": []
+  },
+  "reviews": [],
+  "tagline": "",
+  "industry": "Electrician",
+  "services": [],
+  "owner_name": "Mallory Jordan",
+  "client_slug": "jordan-electric",
+  "form_action": "https://db.pageone.cloud/functions/v1/leads/jordan-electric",
+  "github_repo": "",
+  "web_sources": [
+    "https://www.jordanelectricllc.net/services-content"
+  ],
+  "company_name": "Jordan Electric",
+  "integrations": {
+    "geo": null,
+    "bbb_url": null,
+    "booking": {
+      "days": [],
+      "windows": [],
+      "authorized": false
+    },
+    "spanish": false,
+    "financing": null,
+    "photo_day": null,
+    "accepts_sms": false,
+    "gbp_place_id": null,
+    "estimate_tool": {
+      "pricing": [],
+      "authorized": false
+    },
+    "gbp_map_embed": null,
+    "directions_url": null,
+    "elfsight_embed": null,
+    "financing_note": null,
+    "scheduling_url": null,
+    "text_us_number": null,
+    "review_request_url": null,
+    "certification_links": []
+  },
+  "service_areas": [
+    "Newberry"
+  ],
+  "address_public": true,
+  "business_hours": "",
+  "image_curation": null,
+  "research_brief": {
+    "gbp": null,
+    "brief": {
+      "faqs": [
+        {
+          "a": "Yes. [Insert state license type and number here.] Florida requires electrical contractors to be licensed through the Department of Business and Professional Regulation, and our team carries liability insurance and workers' compensation coverage. You can verify our license on the state's license lookup before hiring us.",
+          "q": "Are you licensed and insured to do electrical work in Florida?"
+        },
+        {
+          "a": "We serve Newberry and nearby communities in Alachua County, including the Gainesville area. [Confirm the exact service radius and list the towns covered.] Call us to confirm availability for your address.",
+          "q": "Do you serve Newberry and the surrounding areas?"
+        },
+        {
+          "a": "Many jobs do, including panel upgrades, new circuits, service changes, and some rewiring. We handle permits and required inspections as part of the project so you don't have to coordinate them yourself. Minor repairs such as replacing a fixture or outlet often don't require one.",
+          "q": "Do electrical repairs or upgrades need a permit in Newberry?"
+        },
+        {
+          "a": "Yes. We can install whole-home surge protection, advise on generator transfer switches, and inspect your electrical system after a storm for damage that isn't always obvious, such as heat-stressed wiring or a damaged service entrance. [Confirm which of these services the company offers.]",
+          "q": "Can you help protect my home during Florida storms and power surges?"
+        },
+        {
+          "a": "Call or request a quote online and we'll schedule a visit. Diagnostic and estimate policies vary by job, so we'll explain the cost before any work begins. You'll receive a written estimate and won't be charged for work you haven't approved. [Insert the company's actual diagnostic fee and pricing policy.]",
+          "q": "How do I get a quote, and what will it cost?"
+        }
+      ],
+      "about_angle": "Position the company as a local, licensed electrician run by people who live and work in Newberry and the surrounding Alachua County area. Lead with the owner's background and why they chose this community, then explain the commitment to code-compliant, safe work and honest communication. Use placeholders for the owner's name, years in business, license number, and a short origin story until the owner supplies them. Avoid invented credentials.",
+      "hero_headline": "Trusted Electricians in Newberry, FL",
+      "differentiators": [
+        "Local focus on Newberry and the Gainesville/Alachua County area, so crews know the local housing stock, service territory, and permitting process (confirm service area with owner)",
+        "Florida electrical licensing shown clearly on the site and in the Google Business Profile, with license number to be supplied by owner",
+        "Experience with older homes and rural properties in north-central Florida, where panel upgrades, rewiring, and grounding issues are common (confirm owner's actual project history)",
+        "Storm readiness messaging for Florida hurricane season: generator transfer switches, whole-home surge protection, and post-storm electrical inspections (confirm services offered)",
+        "Transparent quoting: written estimates before work begins, with no hidden trip charges (confirm owner's pricing policy)",
+        "Direct owner or lead-electrician contact rather than a call center, if that matches how the business operates",
+        "Reviews and before/after project photos from Newberry-area customers, to be collected from the owner, since no competitor or review data was provided"
+      ],
+      "hero_subheadline": "Licensed residential and light commercial electrical service for Newberry homes and businesses. Clear quotes, safe work, and reliable repairs from a local team.",
+      "tone_recommendation": "Friendly and authoritative. Sound knowledgeable and safety-focused, but approachable and plain-spoken, like a local expert explaining things to a neighbor. Avoid jargon, fear-based urgency, and unverified claims. Use local references where they are accurate, and mark every unverified credential, price, or service area as a placeholder for the owner to confirm before publishing."
+    },
+    "competitors": [],
+    "generated_at": "2026-10-19T21:03:30.854Z",
+    "existing_site": null
+  },
+  "competitor_urls": [],
+  "phone_secondary": "",
+  "service_grouping": {
+    "cap": 16,
+    "tier": "premium",
+    "groups": [],
+    "grouped_count": 0,
+    "original_count": 0
+  },
+  "lead_notification_email": "mallory@jordanelectricllc.net",
+  "lead_notification_phone": "(352) 472-5511",
+  "google_business_profile_url": ""
+}
