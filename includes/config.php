@@ -82,7 +82,7 @@ $services = [
                     'commercial electrical repair', 'electrical maintenance']],
 ];
 
-// ---- Service areas (Premium: /areas/{slug}/ per town) -----------------------------------------
+// ---- Service areas (Premium: /service-areas/{slug}/ per town) -----------------------------------------
 $serviceAreas = ['Newberry, FL'];                      // build-plan service_areas
 $areaPages = [
     ['slug' => 'newberry', 'name' => 'Newberry', 'state' => 'FL'],

@@ -67,12 +67,12 @@ function p1_area_links(): array {
     global $areaPages;
     $out = [];
     foreach ((array) ($areaPages ?? []) as $fnArea) {
-        $built = is_dir($_SERVER['DOCUMENT_ROOT'] . '/areas/' . $fnArea['slug']);
+        $built = is_dir($_SERVER['DOCUMENT_ROOT'] . '/service-areas/' . $fnArea['slug']);
         $out[] = [
             'name'  => $fnArea['name'],
             'slug'  => $fnArea['slug'],
             'built' => $built,
-            'href'  => $built ? '/areas/' . $fnArea['slug'] . '/' : '/service-areas/#' . $fnArea['slug'],
+            'href'  => $built ? '/service-areas/' . $fnArea['slug'] . '/' : '/service-areas/#' . $fnArea['slug'],
         ];
     }
     return $out;

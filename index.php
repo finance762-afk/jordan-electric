@@ -109,6 +109,7 @@ $homeWebPage = [
 $schemaMarkup = [$homeWebPage, generateFAQSchema($homeFaqs)];
 $schemaBlocks = $schemaMarkup;                    // head.php renders $schemaBlocks after the LocalBusiness block
 ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/blog-card.php'; // $blogPosts + p1_blog_card() for the "From the Blog" section ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 <style>
@@ -488,10 +489,34 @@ $schemaBlocks = $schemaMarkup;                    // head.php renders $schemaBlo
   .home-services .service-card__body { padding-inline: var(--space-md); }
 }
 
+/* ---- From the blog (latest registry post, featured card) ---- */
+.home-blog { background: var(--color-paper-2); }
+.home-blog__head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-lg); align-items: end; margin-bottom: var(--space-xl); }
+.home-blog__head > div { display: grid; gap: var(--space-xs); }
+.home-blog__head p { margin: 0; color: var(--color-ink-2); max-width: 56ch; }
+.home-blog .blog-card--featured { box-shadow: var(--shadow-lg); border-top: 4px solid var(--color-accent); }
+.home-blog .blog-card__image { aspect-ratio: auto; min-height: 260px; }
+.home-blog .blog-card__tile { background: var(--color-dark); color: var(--color-accent-bright); position: relative; display: grid; place-items: center; align-content: center; gap: var(--space-xs); width: 100%; height: 100%; overflow: hidden; }
+.home-blog .blog-card__tile::before { content: ""; position: absolute; inset: 0; background: radial-gradient(closest-side at 80% 20%, color-mix(in srgb, var(--color-accent) 30%, transparent), transparent 70%), repeating-linear-gradient(90deg, color-mix(in srgb, var(--color-white) 5%, transparent) 0 1px, transparent 1px 40px); }
+.home-blog .blog-card__tile svg, .home-blog .blog-card__tile i { position: relative; }
+.home-blog .blog-card__tile i { font-style: normal; font-family: var(--font-accent); font-size: var(--fs-eyebrow); letter-spacing: .18em; text-transform: uppercase; color: color-mix(in srgb, var(--color-white) 70%, transparent); }
+.home-blog .blog-card--featured { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); transition: transform var(--transition), box-shadow var(--transition); }
+.home-blog .blog-card--featured .blog-card__body { padding: clamp(var(--space-lg), 3vw, var(--space-2xl)); align-content: center; gap: var(--space-sm); }
+.home-blog .blog-card--featured .blog-card__title { font-size: var(--fs-h2); margin: 0; }
+.home-blog .blog-card__title a { color: inherit; text-decoration: none; }
+.home-blog .blog-card__excerpt { font-size: var(--fs-lead); }
+.home-blog .blog-card__cta { display: inline-flex; align-items: center; gap: var(--space-xs); min-height: 44px; text-decoration: none; }
+.home-blog .blog-card__meta { margin: 0; }
+.home-blog .blog-card__category { justify-self: start; padding: .2rem .65rem; border-radius: 999px; background: var(--color-card-tint-1); border: 1px solid var(--color-line); }
+@media (max-width: 800px) {
+  .home-blog__head, .home-blog .blog-card--featured { grid-template-columns: 1fr; }
+  .home-blog .blog-card__image { min-height: 0; aspect-ratio: 16 / 10; }
+}
+
 /* ---- Reduced motion: stop the page's own loops ---- */
 @media (prefers-reduced-motion: reduce) {
   .home-hero__spark { animation: none; }
-  .home-standard__item, .home-services .service-card__icon { transition: none; }
+  .home-standard__item, .home-services .service-card__icon, .home-blog .blog-card--featured { transition: none; }
 }
 </style>
 
@@ -700,6 +725,23 @@ if ($homeReviews !== ''): ?>
     </div>
   </div>
 </section>
+
+<!-- ============ 8b. FROM THE BLOG (latest registry post) ============ -->
+<?php if (!empty($blogPosts)): ?>
+<section class="section home-blog edge-torn-top" aria-labelledby="home-blog-title">
+  <div class="container-wide">
+    <div class="home-blog__head reveal-up">
+      <div>
+        <span class="eyebrow">From the Blog</span>
+        <h2 id="home-blog-title">What is Jordan Electric <span class="text-accent">writing</span> for Newberry homeowners?</h2>
+        <p>Jordan Electric writes plain-language guides for Newberry homeowners and businesses in Alachua County, covering what electrical work costs, how to plan for storm season and how local permits work.</p>
+      </div>
+      <a class="btn btn-secondary" href="/blog/">View All Articles <?php icon('arrow-right', 18); ?></a>
+    </div>
+    <?php echo p1_blog_card($blogPosts[0], true, 'reveal-scale'); ?>
+  </div>
+</section>
+<?php endif; ?>
 
 <!-- ============ 9. ESTIMATE SECTION (full form) ============ -->
 <section class="section home-estimate" id="estimate" aria-labelledby="home-estimate-title">
