@@ -1,0 +1,48 @@
+/* ==========================================================================
+   includes/cta-band.css — styles for includes/cta-band.php (mid-page quote band on About and FAQ).
+   Inlined into the page's <style> by PHP. Tokens only.
+   Sized to its content: copy column about a third, form card about two thirds, fields three-up.
+   ========================================================================== */
+.cta-band { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.cta-band__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: clamp(var(--space-lg), 4vw, var(--space-3xl)); align-items: center; }
+.cta-band__copy { display: grid; gap: var(--space-sm); align-content: start; }
+.cta-band__copy h2 { margin: 0; text-wrap: balance; }
+.cta-band__copy p { margin: 0; max-width: 40ch; }
+.cta-band__card {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border-top: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+.cta-band__fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xs); align-items: stretch; }
+.cta-band__fields input:not([type="checkbox"]), .cta-band__fields select {
+  width: 100%;
+  min-height: 46px;
+  padding: var(--space-xs) var(--space-sm);
+  font: inherit;
+  font-size: 16px;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+.cta-band__service { grid-column: span 2; }
+.cta-band__fields .btn { width: 100%; }
+.cta-band__consent { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--space-sm) var(--space-md); align-items: start; }
+.cta-band__consent .consent { margin: 0; color: var(--color-ink-2); }
+.cta-band__consent .consent a { color: var(--color-accent-dark); text-decoration: underline; }
+.cta-band .cta-band__note { margin: 0; font-size: .76rem; line-height: 1.4; color: var(--color-muted); }
+.cta-band .link-call { color: color-mix(in srgb, var(--color-white) 88%, transparent); }
+.cta-band .link-call svg { color: var(--color-white); }
+@media (max-width: 900px) {
+  .cta-band__grid { grid-template-columns: 1fr; }
+  .cta-band__copy p { max-width: none; }
+}
+@media (max-width: 640px) {
+  .cta-band__fields, .cta-band__consent { grid-template-columns: 1fr; }
+  .cta-band__service { grid-column: auto; }
+}

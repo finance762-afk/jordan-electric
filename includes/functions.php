@@ -260,3 +260,22 @@ function p1_service_by_slug(string $slugWanted): array {
     foreach ((array) $services as $fnSvcRow) if ($fnSvcRow['slug'] === $slugWanted) return $fnSvcRow;
     return [];
 }
+
+/**
+ * @graph for a compliance page (privacy-policy, terms, cookie-policy, accessibility): WebPage + BreadcrumbList.
+ * Compliance pages are indexable informational pages — no Service, no FAQPage.
+ */
+function p1_legal_page_schema(string $name, string $url, string $title, string $description): array {
+    global $siteUrl, $siteName;
+    $base = rtrim($siteUrl, '/');
+    $crumbs = generateBreadcrumbSchema([['Home', $base . '/'], [$name, $url]]);
+    unset($crumbs['@context']);
+    return [
+        '@context' => 'https://schema.org',
+        '@graph'   => [
+            ['@type' => 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => $title, 'description' => $description,
+             'isPartOf' => ['@type' => 'WebSite', 'name' => $siteName, 'url' => $base . '/'], 'about' => ['@id' => p1_org_id()]],
+            $crumbs,
+        ],
+    ];
+}

@@ -108,6 +108,19 @@ $licenseLookupUrl = 'https://www.myfloridalicense.com/wl11.asp';   // Florida DB
 // Short factual description for schema / AEO (build-plan content.description, with the real service names)
 $businessDescription = 'Jordan Electric is an electrician based in Newberry, FL, serving Alachua County. Services include residential electrical services, commercial electrical services, generator installation, and electrical service calls and repairs.';
 
+// ---- Legal identity (used by the four legal pages) ----------------------------------------------
+// build-plan has no entity type or formation state. The client's own site (jordanelectricllc.net, read 2026-10-19)
+// is titled "Jordan Electric LLC", so the entity is an LLC. The state is the state the licence is held in; the actual
+// formation state is NOT stated anywhere — confirm with the client before launch (intake question, legal-compliance.md).
+$companyName       = 'Jordan Electric LLC';
+$companyEntityType = 'Limited Liability Company';
+$companyState      = 'Florida';
+$companyCounty     = 'Alachua County';
+$companyEmail      = $email;
+$companyPhone      = $phone;
+$companyPhoneE164  = $phoneE164;
+$companyAddress    = $address['street'] . ', ' . $address['city'] . ', ' . $address['state'] . ' ' . $address['zip'] . ' (mailing address)';
+
 // ---- Google Business Profile ------------------------------------------------------------------
 $gbp = [
     'place_id'      => '',                             // integrations.gbp_place_id is null

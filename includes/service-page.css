@@ -46,14 +46,14 @@
 .svc-hero .link-call svg { color: var(--color-white); }
 .svc-hero .link-call:hover { color: var(--color-white); }
 /* The scaffold's ink btn-primary disappears on the dark hero: accent instead, with a 3D press */
-.svc-hero .hero-form-open, .svc-final .btn-primary {
+.svc-hero .hero-form-open, .svc-hero .hero-cta, .svc-final .btn-primary {
   background: var(--color-accent);
   border-color: var(--color-accent);
   color: var(--color-white);
   box-shadow: 0 6px 0 var(--color-accent-dark), var(--shadow);
 }
-.svc-hero .hero-form-open:hover, .svc-final .btn-primary:hover { background: color-mix(in srgb, var(--color-accent) 88%, var(--color-white)); transform: translateY(-1px); }
-.svc-hero .hero-form-open:active, .svc-final .btn-primary:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--color-accent-dark); }
+.svc-hero .hero-form-open:hover, .svc-hero .hero-cta:hover, .svc-final .btn-primary:hover { background: color-mix(in srgb, var(--color-accent) 88%, var(--color-white)); transform: translateY(-1px); }
+.svc-hero .hero-form-open:active, .svc-hero .hero-cta:active, .svc-final .btn-primary:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--color-accent-dark); }
 .svc-hero .hero-form-card { position: relative; border-top: 3px solid var(--color-accent); }
 .svc-hero .hero-form-card .hero-form-card__title { margin: 0; font-family: var(--font-heading); font-weight: 800; font-size: var(--fs-h3); color: var(--color-ink); letter-spacing: -0.01em; }
 .svc-hero .hero-form-card .consent { color: var(--color-ink-2); }
